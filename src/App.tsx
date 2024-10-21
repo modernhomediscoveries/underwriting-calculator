@@ -22,6 +22,41 @@ function App() {
   });
 
   useEffect(() => {
+    let currentDocumentHeight = 0;
+
+    const sendMessageUpdatingHeight = (height: number) => {
+      window.parent.postMessage(
+        { eventName: "SET_HEIGHT", payload: { height } },
+        "*"
+      );
+    };
+
+    const handleDocumentMutation = () => {
+      const documentHeight = document.body.scrollHeight;
+
+      if (documentHeight && documentHeight !== currentDocumentHeight) {
+        currentDocumentHeight = documentHeight;
+        console.log(documentHeight);
+        sendMessageUpdatingHeight(documentHeight);
+      }
+    };
+
+    const observer = new MutationObserver(handleDocumentMutation);
+
+    observer.observe(document.body, {
+      subtree: true,
+      attributes: true,
+      childList: true,
+      characterData: true,
+    });
+
+    setTimeout(() => {
+      const documentHeight = document.body.scrollHeight;
+      sendMessageUpdatingHeight(documentHeight);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
     const unitValue = formData?.units[0] || 0;
     const marketRent = formData?.marketRent[0] || 0;
     const otherIncome = formData?.otherIncome[0] || 0;
@@ -251,15 +286,15 @@ function App() {
           <div className="text-white py-3 rounded">
             <p>Net Operating Income</p>
             <p className="text-4xl font-semibold text-primary_green">
-              {/* ${valueIncrease.netOperatingIncome.toLocaleString()} */}
-              ${(Number(valueIncrease.netOperatingIncome)).toLocaleString()}
+              {/* ${valueIncrease.netOperatingIncome.toLocaleString()} */}$
+              {Number(valueIncrease.netOperatingIncome).toLocaleString()}
             </p>
           </div>{" "}
           <div className="bg-white w-full  py-3 rounded border-l-4 border-l-[#2ab499]">
             <p>Property Value Increase</p>
             <p className="text-4xl font-semibold text-primary_green">
-              {/* ${valueIncrease.priceToOffer.toLocaleString()} */}
-              ${(Number(valueIncrease.priceToOffer)).toLocaleString()}
+              {/* ${valueIncrease.priceToOffer.toLocaleString()} */}$
+              {Number(valueIncrease.priceToOffer).toLocaleString()}
             </p>
           </div>
         </div>
