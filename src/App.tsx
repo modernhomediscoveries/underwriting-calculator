@@ -72,7 +72,7 @@ function App() {
       (1 + otherIncome / 100) *
       (1 - expenses / 100);
     const priceToOffer =
-      capRate == 0 ? "∞" : netOperatingIncome / (capRate / 100);
+      capRate == 0 ? "∞" : Math.round(netOperatingIncome / (capRate / 100));
     setValueIncrease({
       netOperatingIncome: Math.round(netOperatingIncome),
       priceToOffer,
