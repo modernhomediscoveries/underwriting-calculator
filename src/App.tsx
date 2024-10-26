@@ -291,7 +291,7 @@ function App() {
             </p>
           </div>{" "}
           <div className="bg-white w-full  py-3 rounded border-l-4 border-l-[#2ab499]">
-            <p>Property Value Increase</p>
+            <p>Price To Offer For The Deal</p>
             <p className="text-4xl font-semibold text-primary_green">
               {/* ${valueIncrease.priceToOffer.toLocaleString()} */}$
               {Number(valueIncrease.priceToOffer).toLocaleString()}
