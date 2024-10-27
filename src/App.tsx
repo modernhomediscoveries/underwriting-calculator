@@ -71,7 +71,7 @@ function App() {
       (1 + otherIncome / 100) *
       (1 - expenses / 100);
     const priceToOffer =
-      capRate == 0 ? "∞" : netOperatingIncome / (capRate / 100);
+      capRate == 0 ? "∞" : Math.round(netOperatingIncome / (capRate / 100));
     setValueIncrease({
       netOperatingIncome: Math.round(netOperatingIncome),
       priceToOffer,
@@ -96,7 +96,7 @@ function App() {
       <form className="bg-white p-5 rounded-t-[15px] md:rounded-none md:rounded-l-[15px]">
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Number of units:</p>
+            <p className="text-lg font-semibold">No. of units:</p>
             <div className="relative">
               <Input
                 name="units"
@@ -299,7 +299,7 @@ function App() {
             </p>
           </div>{" "}
           <div className="bg-white w-full  py-3 rounded border-l-4 border-l-[#2ab499]">
-            <p>Property Value Increase</p>
+            <p>Price To Offer For The Deal</p>
             <p className="text-4xl font-semibold text-primary_green">
               $
               {isNaN(Number(valueIncrease.priceToOffer))
