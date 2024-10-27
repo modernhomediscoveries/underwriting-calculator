@@ -37,7 +37,6 @@ function App() {
 
       if (documentHeight && documentHeight !== currentDocumentHeight) {
         currentDocumentHeight = documentHeight;
-        console.log(documentHeight);
         sendMessageUpdatingHeight(documentHeight);
       }
     };
@@ -98,7 +97,7 @@ function App() {
       <form className="bg-white p-5 rounded-t-[15px] md:rounded-none md:rounded-l-[15px]">
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Number of units:</p>
+            <p className="text-lg font-semibold">No. of units:</p>
             <div className="relative">
               <Input
                 name="units"
@@ -263,6 +262,7 @@ function App() {
             <div className="relative">
               <Input
                 name="capRate"
+                type="text"
                 value={formData.capRate[0]}
                 onChange={(e) => {
                   e.target.value = formatNumberInput(e.target.value, 3);
@@ -283,7 +283,7 @@ function App() {
             }
             value={[Number(formData.capRate)]}
             defaultValue={[Number(formData.capRate)]}
-            max={20}
+            max={100}
             min={1}
             step={0.25}
           />
@@ -296,16 +296,20 @@ function App() {
         <div className="w-full text-center">
           <div className="text-white py-3 rounded">
             <p>Net Operating Income</p>
-            <p className="text-4xl font-semibold text-primary_green">
-              {/* ${valueIncrease.netOperatingIncome.toLocaleString()} */}$
-              {Number(valueIncrease.netOperatingIncome).toLocaleString()}
+            <p className="text-4xl font-semibold">
+              ${" "}
+              {isNaN(Number(valueIncrease.netOperatingIncome))
+                ? 0
+                : Number(valueIncrease.netOperatingIncome).toLocaleString()}
             </p>
           </div>{" "}
           <div className="bg-white w-full  py-3 rounded border-l-4 border-l-[#2ab499]">
-            <p>Property Value Increase</p>
+            <p>Price To Offer For The Deal</p>
             <p className="text-4xl font-semibold text-primary_green">
-              {/* ${valueIncrease.priceToOffer.toLocaleString()} */}$
-              {Number(valueIncrease.priceToOffer).toLocaleString()}
+              $
+              {isNaN(Number(valueIncrease.priceToOffer))
+                ? 0
+                : Number(valueIncrease.priceToOffer).toLocaleString()}
             </p>
           </div>
         </div>
