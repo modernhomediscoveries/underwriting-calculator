@@ -97,14 +97,14 @@ function App() {
       <form className="bg-white p-5 rounded-t-[15px] md:rounded-none md:rounded-l-[15px]">
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">No. of units:</p>
+            <p className="text-lg font-bold">Number Of Units:</p>
             <div className="relative">
               <Input
                 name="units"
                 value={formData.units[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 Unit
               </p>
             </div>
@@ -120,7 +120,7 @@ function App() {
             min={1}
             step={1}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Enter the total number of units in the property
           </p>
         </div>
@@ -129,14 +129,14 @@ function App() {
         <hr className="my-3" />
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Market Rent:</p>
+            <p className="text-lg font-bold">Market Rent:</p>
             <div className="relative">
               <Input
                 name="marketRent"
                 value={formData.marketRent[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 USD
               </p>
             </div>
@@ -152,7 +152,7 @@ function App() {
             min={1}
             step={25}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Enter the monthly fair market rent per unit for this property
           </p>
         </div>
@@ -161,14 +161,14 @@ function App() {
         <hr className="my-3" />
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Other Income:</p>
+            <p className="text-lg font-bold">Other Income:</p>
             <div className="relative">
               <Input
                 name="otherIncome"
                 value={formData.otherIncome[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -184,7 +184,7 @@ function App() {
             min={0}
             step={0.25}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Enter other income as a percentage from application fees, pet fees,
             utilities, trash fees, parking fees, etc.
           </p>
@@ -194,14 +194,14 @@ function App() {
         <hr className="my-3" />
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Occupancy:</p>
+            <p className="text-lg font-bold">Occupancy:</p>
             <div className="relative">
               <Input
                 name="occupancy"
                 value={formData.occupancy[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -217,7 +217,7 @@ function App() {
             min={1}
             step={1}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Enter the occupancy percentage of the deal{" "}
           </p>
         </div>
@@ -226,14 +226,14 @@ function App() {
         <hr className="my-3" />
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Expenses:</p>
+            <p className="text-lg font-bold">Expenses:</p>
             <div className="relative">
               <Input
                 name="expenses"
                 value={formData.expenses[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -249,7 +249,7 @@ function App() {
             min={20}
             step={1}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Now enter your expenses as a percentage of your gross annual income…
           </p>
         </div>
@@ -258,7 +258,7 @@ function App() {
         <hr className="my-3" />
         <div className="">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Cap Rate:</p>
+            <p className="text-lg font-bold">Capitalization Rate:</p>
             <div className="relative">
               <Input
                 name="capRate"
@@ -271,7 +271,7 @@ function App() {
                   handleChange(e);
                 }}
               />
-              <p className="text-gray-400 font-light  absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -287,7 +287,7 @@ function App() {
             min={1}
             step={0.25}
           />
-          <p className="text-start mt-2">
+          <p className="font-medium text-start mt-2">
             Enter the Cap Rate you're willing to pay
           </p>
         </div>
