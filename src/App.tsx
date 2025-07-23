@@ -92,10 +92,10 @@ function App() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 w-[1200px] max-w-full mx-auto">
+    <div className="grid md:grid-cols-2 w-[1200px] max-w-full mx-auto text-[#2e3746]">
       <form className="bg-white p-5 rounded-t-[15px] md:rounded-none md:rounded-l-[15px]">
         <div>
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Number Of Units:</p>
             <div className="relative">
               <Input
@@ -127,7 +127,7 @@ function App() {
         {/* 2 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Market Rent:</p>
             <div className="relative">
               <Input
@@ -159,7 +159,7 @@ function App() {
         {/* 3 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Other Income:</p>
             <div className="relative">
               <Input
@@ -192,7 +192,7 @@ function App() {
         {/* 4 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Occupancy:</p>
             <div className="relative">
               <Input
@@ -224,7 +224,7 @@ function App() {
         {/* 5 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Expenses:</p>
             <div className="relative">
               <Input
@@ -256,7 +256,7 @@ function App() {
         {/* 6 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+          <div className="flex font-bold justify-between items-center mb-4">
             <p className="text-lg">Capitalization Rate:</p>
             <div className="relative">
               <Input
