@@ -104,7 +104,7 @@ function App() {
                 onChange={handleChange}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
-                Unit
+                Units
               </p>
             </div>
           </div>
