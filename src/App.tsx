@@ -95,15 +95,15 @@ function App() {
     <div className="grid md:grid-cols-2 w-[1200px] max-w-full mx-auto">
       <form className="bg-white p-5 rounded-t-[15px] md:rounded-none md:rounded-l-[15px]">
         <div>
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Number Of Units:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Number Of Units:</p>
             <div className="relative">
               <Input
                 name="units"
                 value={formData.units[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 Unit
               </p>
             </div>
@@ -127,15 +127,15 @@ function App() {
         {/* 2 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Market Rent:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Market Rent:</p>
             <div className="relative">
               <Input
                 name="marketRent"
                 value={formatNumberInput(formData.marketRent[0].toString())}
                 onChange={handleChange}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 USD
               </p>
             </div>
@@ -159,15 +159,15 @@ function App() {
         {/* 3 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Other Income:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Other Income:</p>
             <div className="relative">
               <Input
                 name="otherIncome"
                 value={formData.otherIncome[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -192,15 +192,15 @@ function App() {
         {/* 4 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Occupancy:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Occupancy:</p>
             <div className="relative">
               <Input
                 name="occupancy"
                 value={formData.occupancy[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -224,15 +224,15 @@ function App() {
         {/* 5 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Expenses:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Expenses:</p>
             <div className="relative">
               <Input
                 name="expenses"
                 value={formData.expenses[0]}
                 onChange={handleChange}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
@@ -256,8 +256,8 @@ function App() {
         {/* 6 */}
         <hr className="my-3" />
         <div className="">
-          <div className="flex justify-between items-center mb-4 text-[#2e3746]">
-            <p className="text-lg font-bold">Capitalization Rate:</p>
+          <div className="flex font-bold justify-between items-center mb-4 text-[#2e3746]">
+            <p className="text-lg">Capitalization Rate:</p>
             <div className="relative">
               <Input
                 name="capRate"
@@ -270,7 +270,7 @@ function App() {
                   handleChange(e);
                 }}
               />
-              <p className="text-gray-500 font-medium absolute right-2 top-1/2  transform -translate-y-1/2">
+              <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
               </p>
             </div>
