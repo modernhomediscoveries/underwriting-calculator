@@ -102,6 +102,7 @@ function App() {
                 name="units"
                 value={formData.units[0]}
                 onChange={handleChange}
+                maxValue={999999}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 Units
@@ -134,6 +135,7 @@ function App() {
                 name="marketRent"
                 value={formatNumberInput(formData.marketRent[0].toString())}
                 onChange={handleChange}
+                maxValue={999999}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 USD
@@ -166,6 +168,7 @@ function App() {
                 name="otherIncome"
                 value={formData.otherIncome[0]}
                 onChange={handleChange}
+                maxValue={100}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
@@ -199,6 +202,7 @@ function App() {
                 name="occupancy"
                 value={formData.occupancy[0]}
                 onChange={handleChange}
+                maxValue={100}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
@@ -231,6 +235,7 @@ function App() {
                 name="expenses"
                 value={formData.expenses[0]}
                 onChange={handleChange}
+                maxValue={100}
               />
               <p className="absolute right-2 top-1/2  transform -translate-y-1/2">
                 %
@@ -263,6 +268,7 @@ function App() {
                 name="capRate"
                 type="text"
                 value={formData.capRate[0]}
+                maxValue={100}
                 onChange={(e) => {
                   e.target.value = formatNumberInput(e.target.value, 3);
                   if (numberInterpret(e.target.value) > 100)
